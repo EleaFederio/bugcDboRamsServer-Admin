@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="545.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER" prefHeight="24.0" prefWidth="100.0" style="-fx-background-color: #3392ff;">
+         <children>
+            <Label text="Record Finger Biometric">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children></VBox>
+      <VBox prefHeight="10.0" prefWidth="100.0" style="-fx-background-color: #888888;" />
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0" spacing="30.0">
+         <children>
+            <Label fx:id="year" text="Please use AttendanceMonitor/Recorder.jar">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="280.0" prefWidth="545.0">
+         <children>
+            <Label fx:id="block" text="ZKfinger SDK is not compatible with javaFx fremework!" />
+         </children>
+      </HBox>
+      <Label fx:id="warningLabel" />
+   </children>
+</VBox>

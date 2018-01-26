@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="323.0" style="-fx-background-color: #dddddd;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dboMars.Systems.LoginController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="53.0" prefWidth="323.0" style="-fx-background-color: #001155;">
+         <children>
+            <Label text="Bicol Univerity Gubat Campus" textFill="#fcf9f9">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <Label text="Department Base Organization" textFill="#e8e2e2">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Monitoring and record System" textFill="#f2f2f2" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" top="5.0" />
+         </padding>
+      </VBox>
+      <Label text="Welcome">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="15.0" />
+         </VBox.margin>
+      </Label>
+      <Label text="Username">
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="35.0" prefWidth="323.0">
+         <children>
+            <ImageView fitHeight="35.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/user-64(1).png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="username" prefHeight="26.0" prefWidth="203.0">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <Label text="Password">
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="36.0" prefWidth="323.0">
+         <children>
+            <ImageView fitHeight="41.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/key-3-64(1).png" />
+               </image>
+            </ImageView>
+            <PasswordField fx:id="password" prefHeight="20.0" prefWidth="204.0">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </PasswordField>
+         </children>
+      </HBox>
+      <Button fx:id="loginButton" mnemonicParsing="false" onMouseClicked="#login" onMouseEntered="#changeColorEntered" onMouseExited="#changeColorExit" style="-fx-background-color: linear-gradient(#ffffff, #9999ff);" text="Login" textFill="#0a0000">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="5.0" left="30.0" right="30.0" top="5.0" />
+         </padding>
+         <font>
+            <Font name="Noto Sans CJK KR Medium" size="13.0" />
+         </font>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#cancelLogin" onMouseClicked="#cancelLogin" text="Cancel">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="3.0" left="4.0" right="4.0" top="3.0" />
+         </padding>
+      </Button>
+      <Label fx:id="forgotPasswordLink" onMouseClicked="#forgotPassword" onMouseEntered="#forgetPasswordChangeColor" text="Forgot Password?" underline="true">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</VBox>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dboMars.Systems.MainProgram">
+   <top>
+      <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="700.0" style="-fx-background-color: rgb(50,50,50);" BorderPane.alignment="CENTER" />
+   </top>
+   <left>
+      <VBox prefHeight="716.0" prefWidth="155.0" style="-fx-background-color: rgb(100,100,100);" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="setting" onMouseClicked="#settingClick" onMouseEntered="#settingHover" onMouseExited="#settingExit" prefHeight="35.0" prefWidth="204.0" style="-fx-background-color: rgb(150, 150, 150);">
+               <children>
+                  <ImageView fitHeight="35.0" fitWidth="53.0" layoutX="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/setting.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="44.0" layoutY="16.0" text="Settings" textFill="WHITE">
+                     <font>
+                        <Font name="DejaVu Sans Mono Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="44.0" layoutY="3.0" text="Account" textFill="WHITE">
+                     <font>
+                        <Font name="DejaVu Sans Mono Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="record" onMouseClicked="#recordClick" onMouseEntered="#recordHover" onMouseExited="#recordExit" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: rgb(150,150,150);">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+               <children>
+                  <ImageView fitHeight="33.0" fitWidth="35.0" layoutX="4.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/record.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="44.0" layoutY="4.0" text="Record" textFill="#f2eeee">
+                     <font>
+                        <Font name="DejaVu Sans Mono Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane onMouseClicked="#assignOfficer" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: rgb(150, 150, 150);">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+               <children>
+                  <Label layoutX="44.0" layoutY="3.0" text="Assign " textFill="WHITE">
+                     <font>
+                        <Font name="DejaVu Sans Mono Bold" size="13.0" />
+                     </font></Label>
+                  <Label layoutX="44.0" layoutY="17.0" text="DBO Officer" textFill="WHITE">
+                     <font>
+                        <Font name="DejaVu Sans Mono Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="33.0" fitWidth="48.0" layoutX="6.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/officer_icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="monitor" onMouseClicked="#registerClick" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: rgb(150,150,150);">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+               <children>
+                  <Label layoutX="44.0" layoutY="4.0" text="Biometrics" textFill="#f2eded">
+                     <font>
+                        <Font name="DejaVu Sans Mono Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="33.0" fitWidth="48.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/fingerprint-icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: rgb(150, 150, 150);">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+               <children>
+                  <Label layoutX="42.0" layoutY="-1.0" text="About" textFill="#f8f5f5">
+                     <font>
+                        <Font name="DejaVu Sans Mono Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="42.0" layoutY="15.0" text="Developer" textFill="WHITE">
+                     <font>
+                        <Font name="DejaVu Sans Mono Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="33.0" fitWidth="35.0" layoutX="4.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/developer.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="logout" onMouseClicked="#logout" onMouseEntered="#logoutHover" onMouseExited="#logoutExit" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: rgb(150, 150, 150);">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+               <children>
+                  <ImageView fitHeight="33.0" fitWidth="48.0" layoutX="4.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/exit.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="44.0" layoutY="4.0" text="Logout" textFill="WHITE">
+                     <font>
+                        <Font name="DejaVu Sans Mono Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+         </children></VBox>
+   </left>
+   <bottom>
+      <HBox prefHeight="20.0" prefWidth="903.0" style="-fx-background-color: rgb(50,50,50);" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <VBox fx:id="settingButton" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0">
+         <children>
+            <Separator orientation="VERTICAL" prefHeight="800.0" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

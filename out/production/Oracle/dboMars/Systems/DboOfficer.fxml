@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="545.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dboMars.Systems.DboOfficer">
+   <children>
+      <VBox alignment="CENTER" prefHeight="24.0" prefWidth="545.0" style="-fx-background-color: #3392ff;">
+         <children>
+            <Label text="Assign Officer" textFill="#1f0aa8">
+               <font>
+                  <Font name="DejaVu Sans Mono Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="1.0" right="1.0" top="1.0" />
+         </padding></VBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="545.0" style="-fx-background-color: #0afaaf;">
+         <children>
+            <VBox fx:id="toogleOracle" alignment="CENTER" onMouseClicked="#toogleToOracle" prefHeight="200.0" prefWidth="180.0" style="-fx-background-color: #000000;">
+               <children>
+                  <Label text="ORACLE" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets right="1.0" />
+               </HBox.margin></VBox>
+            <VBox fx:id="toogleOasia" alignment="CENTER" onMouseClicked="#toogleToOasia" prefHeight="200.0" prefWidth="180.0" style="-fx-background-color: #000000;">
+               <HBox.margin>
+                  <Insets right="1.0" />
+               </HBox.margin>
+               <children>
+                  <Label text="OASIA" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets right="1.0" />
+               </padding></VBox>
+            <VBox fx:id="toogleBeda" alignment="CENTER" onMouseClicked="#toogleToBeda" prefHeight="200.0" prefWidth="180.0" style="-fx-background-color: black;">
+               <children>
+                  <Label text="BEEDA" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="3.0" left="1.0" right="1.0" top="3.0" />
+         </padding>
+      </HBox>
+      <TableView fx:id="officersTable" prefHeight="200.0" prefWidth="545.0">
+        <columns>
+          <TableColumn fx:id="idField" prefWidth="100.0" text="ID" />
+          <TableColumn fx:id="firstNameField" prefWidth="90.0" text="First Name" />
+            <TableColumn fx:id="lastNameField" prefWidth="90.0" text="Last Name" />
+            <TableColumn fx:id="courseField" prefWidth="57.0" text="Course" />
+            <TableColumn fx:id="yearField" prefWidth="40.0" text="Year" />
+            <TableColumn fx:id="blockField" prefWidth="50.0" text="Block" />
+            <TableColumn fx:id="positionField" prefWidth="115.0" text="Position" />
+        </columns>
+      </TableView>
+      <HBox alignment="CENTER" maxHeight="30.0" maxWidth="520.0" prefHeight="100.0" prefWidth="200.0">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+         <children>
+            <Label text="Assign As:">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="positionSelector" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </ComboBox>
+            <Button fx:id="assignButton" mnemonicParsing="false" onAction="#assign" text="Assign">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <Button fx:id="showAllOfficerButton" mnemonicParsing="false" onAction="#showOfficers" prefWidth="200.0" text="Show All Officers">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#showAllStudents" prefWidth="200.0" text="Show All Students">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+</VBox>

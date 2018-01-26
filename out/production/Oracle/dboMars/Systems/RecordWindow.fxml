@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="545.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dboMars.Systems.RecordWindow">
+   <children>
+      <Label text="Student Record">
+         <font>
+            <Font name="DejaVu Sans Mono Bold" size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+      </Label>
+      <TableView fx:id="studentTable" onMouseClicked="#select" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="firstNameColumn" prefWidth="90.0" text="First Name" />
+          <TableColumn fx:id="lastNameColumn" prefWidth="90.0" text="Last Name" />
+            <TableColumn fx:id="courseColumn" prefWidth="60.0" text="Course" />
+            <TableColumn fx:id="yearColumn" prefWidth="40.0" text="Year" />
+            <TableColumn fx:id="blockColumn" prefWidth="50.0" text="Block" />
+            <TableColumn fx:id="hashColumn" prefWidth="90.0" text="Hash Code" />
+            <TableColumn fx:id="studentIdColumn" prefWidth="123.0" text="ID Number" />
+        </columns>
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+      </TableView>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+         <children>
+            <TextField fx:id="firstNameField" prefWidth="150.0" promptText="First Name" />
+            <TextField fx:id="lastNameField" prefWidth="150.0" promptText="Last Name" />
+            <ComboBox fx:id="courseField" prefWidth="95.0" promptText="Course" />
+            <ComboBox fx:id="yearField" prefWidth="80.0" promptText="Year" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="30.0">
+         <children>
+            <ComboBox fx:id="blockField" prefWidth="90.0" promptText="Block" />
+            <TextField fx:id="studentIdField" promptText="Student ID" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="30.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#add" prefWidth="100.0" text="Add" />
+            <Button mnemonicParsing="false" onAction="#update" prefWidth="100.0" text="Update" />
+            <Button mnemonicParsing="false" onAction="#delete" prefWidth="100.0" text="Delete" />
+            <Button mnemonicParsing="false" onAction="#clearUi" prefWidth="100.0" text="Reset" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
